@@ -585,17 +585,38 @@
         },
         "E_97": {
           "rhs": {
-            "global_ID": " F_17 D_0 V_143 D_1",
-            "latex": "\\textbf{Root}\\left( {{\\rho}}{_{N}}\\right)"
+            "global_ID": " F_17 D_0 V_143 O_1 D_0 F_15 D_0 V_110 D_1 O_4 V_137 D_1 D_1",
+            "latex": "\\textbf{Root}\\left( {{\\rho}}{_{N}}  - \\left(\\left( {V}{_{N}} \\right)^{-1} \\, . \\, {m}{_{N}}\\right)\\right)"
           },
           "type": "generic",
           "doc": "volume",
           "network": "macroscopic",
           "incidence_list": [
+            "V_110",
+            "V_137",
             "V_143"
           ],
           "created": "2024-04-04 14:59:02",
-          "modified": "2024-04-04 14:59:02",
+          "modified": "2024-09-30 13:53:29",
+          "lhs": {
+            "global_ID": "V_110",
+            "latex": "{V}{_{N}}"
+          }
+        },
+        "E_98": {
+          "rhs": {
+            "global_ID": " V_137 O_4 F_15 D_0 V_143 D_1",
+            "latex": "{m}{_{N}} \\, . \\, \\left( {{\\rho}}{_{N}} \\right)^{-1}"
+          },
+          "type": "generic",
+          "doc": "volume",
+          "network": "macroscopic",
+          "incidence_list": [
+            "V_137",
+            "V_143"
+          ],
+          "created": "2024-04-09 09:23:38",
+          "modified": "2024-04-09 09:23:38",
           "lhs": {
             "global_ID": "V_110",
             "latex": "{V}{_{N}}"
@@ -641,8 +662,8 @@
       "equations": {
         "E_93": {
           "rhs": {
-            "global_ID": " O_8 D_0 V_196 D_8 V_1 O_13 D_2 V_105 D_7 V_106 D_3 D_1",
-            "latex": "\\int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \\, {{\\dot{n}}}{_{N, S}} \\enskip d\\,{t}{_{}}"
+            "global_ID": " O_8 D_0 V_196 D_8 V_1 O_13 D_2 V_105 D_7 V_106 D_3 D_1 O_0 V_201",
+            "latex": "\\int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \\, {{\\dot{n}}}{_{N, S}} \\enskip d\\,{t}{_{}}  + {no}{_{N, S}}"
           },
           "type": "generic",
           "doc": "fundamental state -- molar mass",
@@ -651,10 +672,11 @@
             "V_1",
             "V_105",
             "V_106",
-            "V_196"
+            "V_196",
+            "V_201"
           ],
           "created": "2024-04-03 17:33:24",
-          "modified": "2024-04-03 17:33:24",
+          "modified": "2024-05-10 14:56:40",
           "lhs": {
             "global_ID": "V_111",
             "latex": "{n}{_{N, S}}"
@@ -5032,6 +5054,64 @@
         0
       ]
     },
+    "V_201": {
+      "IRI": "promo:no",
+      "aliases": {
+        "matlab": "no",
+        "latex": "no",
+        "internal_code": "no",
+        "global_ID": "V_201"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_201",
+        "latex": "{no}{_{N, S}}"
+      },
+      "created": "2024-05-10 14:56:05",
+      "doc": "initial molar mass",
+      "equations": {
+        "E_99": {
+          "rhs": {
+            "global_ID": " O_10 D_0 V_111 D_7 V_101 D_1",
+            "latex": "\\textbf{Instantiate}({n}{_{N, S}}, {{\\#}}{_{}})"
+          },
+          "type": "generic",
+          "doc": "",
+          "network": "macroscopic",
+          "incidence_list": [
+            "V_101",
+            "V_111"
+          ],
+          "created": "2024-05-10 14:56:05",
+          "modified": "2024-05-10 14:56:05",
+          "lhs": {
+            "global_ID": "V_201",
+            "latex": "{no}{_{N, S}}"
+          }
+        }
+      },
+      "imported": false,
+      "index_structures": [
+        "I_1",
+        "I_4"
+      ],
+      "label": "no",
+      "memory": null,
+      "modified": "2024-05-10 14:56:19",
+      "network": "macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "state",
+      "units": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
     "V_21": {
       "IRI": "promo:u_Ntu",
       "aliases": {
@@ -5864,7 +5944,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 200,
-    "equation": 97
+    "variable": 201,
+    "equation": 99
   }
 }

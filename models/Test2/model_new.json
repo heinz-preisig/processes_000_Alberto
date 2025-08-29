@@ -1,0 +1,132 @@
+{
+    "N_0": {
+        "identifier": "N_0",
+        "name": "Test2",
+        "subtype": 2,
+        "parent_id": null,
+        "modeller_class": "NodeComposite",
+        "children_ids": [
+            "N_1",
+            "N_2",
+            "A_3",
+            "N_4",
+            "A_5"
+        ]
+    },
+    "N_1": {
+        "identifier": "N_1",
+        "name": "Reservoir",
+        "subtype": 1,
+        "parent_id": "N_0",
+        "modeller_class": "EntityContainer",
+        "entity_name": "macroscopic.node.mass|constant|infinity.Reservoir",
+        "network": "liquid",
+        "named_network": "A-liquid",
+        "tokens": [
+            "mass"
+        ],
+        "typed_tokens": {
+            "mass": []
+        },
+        "conversions": null,
+        "instantiated_variables": {},
+        "outgoing_nodes": [
+            "A_3"
+        ]
+    },
+    "N_2": {
+        "identifier": "N_2",
+        "name": "Tank",
+        "subtype": 1,
+        "parent_id": "N_0",
+        "modeller_class": "EntityContainer",
+        "entity_name": "macroscopic.node.mass|dynamic|lumped.Tank",
+        "network": "liquid",
+        "named_network": "A-liquid",
+        "tokens": [
+            "mass"
+        ],
+        "typed_tokens": {
+            "mass": []
+        },
+        "conversions": {},
+        "instantiated_variables": {
+            "V_104": {},
+            "V_105": {},
+            "V_106": {},
+            "V_132": {},
+            "V_143": {},
+            "V_195": {},
+            "V_197": {},
+            "V_199": {}
+        },
+        "outgoing_nodes": []
+    },
+    "A_3": {
+        "identifier": "A_3",
+        "name": "Pipe",
+        "subtype": 3,
+        "parent_id": "N_0",
+        "modeller_class": "EntityContainer",
+        "entity_name": "macroscopic.arc.mass|convection|lumped.Pipe",
+        "network": "liquid",
+        "named_network": "A-liquid >>> A-liquid",
+        "tokens": [
+            "mass"
+        ],
+        "typed_tokens": {
+            "mass": []
+        },
+        "conversions": null,
+        "instantiated_variables": {
+            "V_160": {}
+        },
+        "outgoing_nodes": [
+            "N_2"
+        ]
+    },
+    "N_4": {
+        "identifier": "N_4",
+        "name": "default",
+        "subtype": 1,
+        "parent_id": "N_0",
+        "modeller_class": "EntityContainer",
+        "entity_name": "macroscopic.node.mass|constant|infinity.Reservoir",
+        "network": "liquid",
+        "named_network": "A-liquid",
+        "tokens": [
+            "mass"
+        ],
+        "typed_tokens": {
+            "mass": []
+        },
+        "conversions": null,
+        "instantiated_variables": {},
+        "outgoing_nodes": [
+            "A_5"
+        ]
+    },
+    "A_5": {
+        "identifier": "A_5",
+        "name": "default",
+        "subtype": 3,
+        "parent_id": "N_0",
+        "modeller_class": "EntityContainer",
+        "entity_name": "macroscopic.arc.mass|convection|lumped.Pipe",
+        "network": "liquid",
+        "named_network": "A-liquid >>> A-liquid",
+        "tokens": [
+            "mass"
+        ],
+        "typed_tokens": {
+            "mass": []
+        },
+        "conversions": null,
+        "instantiated_variables": {
+            "V_160": {}
+        },
+        "outgoing_nodes": [
+            "N_2"
+        ]
+    }
+}

@@ -362,7 +362,7 @@
   "E_93": {
     "lhs": "n",
     "network": "macroscopic",
-    "rhs": " Integral ( an :: t in [ to , te ] )"
+    "rhs": " Integral ( an :: t in [ to , te ] ) + no"
   },
   "E_94": {
     "lhs": "pi",
@@ -382,6 +382,16 @@
   "E_97": {
     "lhs": "V",
     "network": "macroscopic",
-    "rhs": " Root ( rho )"
+    "rhs": " Root ( rho - ( inv ( V ) . m ) )"
+  },
+  "E_98": {
+    "lhs": "V",
+    "network": "macroscopic",
+    "rhs": " m . inv ( rho )"
+  },
+  "E_99": {
+    "lhs": "no",
+    "network": "macroscopic",
+    "rhs": " Instantiate ( n , value )"
   }
 }

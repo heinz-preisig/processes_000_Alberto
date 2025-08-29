@@ -269,7 +269,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}differential mass balance without reaction\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:111"}{ 93 }\hypertarget{"e:93"}{  } &
-    \begin{eq}{n}{_{N, S}} := \int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \, {{\dot{n}}}{_{N, S}} \enskip d\,{t}{_{}}\end{eq} &
+    \begin{eq}{n}{_{N, S}} := \int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \, {{\dot{n}}}{_{N, S}} \enskip d\,{t}{_{}}  + {no}{_{N, S}}\end{eq} &
     \begin{lay}fundamental state -- molar mass\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:199"}{ 94 }\hypertarget{"e:94"}{  } &
@@ -285,8 +285,16 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}liquid level cylinder\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:110"}{ 97 }\hypertarget{"e:97"}{  } &
-    \begin{eq}{V}{_{N}} := \textbf{Root}\left( {{\rho}}{_{N}}\right)\end{eq} &
+    \begin{eq}{V}{_{N}} := \textbf{Root}\left( {{\rho}}{_{N}}  - \left(\left( {V}{_{N}} \right)^{-1} \, . \, {m}{_{N}}\right)\right)\end{eq} &
     \begin{lay}volume\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+        \hyperlink{"v:110"}{ 98 }\hypertarget{"e:98"}{  } &
+    \begin{eq}{V}{_{N}} := {m}{_{N}} \, . \, \left( {{\rho}}{_{N}} \right)^{-1}\end{eq} &
+    \begin{lay}volume\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+        \hyperlink{"v:201"}{ 99 }\hypertarget{"e:99"}{  } &
+    \begin{eq}{no}{_{N, S}} := \textbf{Instantiate}({n}{_{N, S}}, {{\#}}{_{}})\end{eq} &
+    \begin{lay}\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hline
 \end{longtable}
