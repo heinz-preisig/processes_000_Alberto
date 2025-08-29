@@ -1,0 +1,93 @@
+{
+    "N_0": {
+        "identifier": "N_0",
+        "name": "Test4",
+        "parent_id": null,
+        "modeller_class": "NodeComposite",
+        "children_ids": [
+            "N_1",
+            "N_2",
+            "A_3"
+        ]
+    },
+    "N_1": {
+        "identifier": "N_1",
+        "name": "Reservoir",
+        "parent_id": "N_0",
+        "modeller_class": "NodeSimple",
+        "entity_name": "macroscopic.node.mass|constant|infinity.Reservoir",
+        "network": "liquid",
+        "named_network": "A-liquid",
+        "tokens": [
+            "mass"
+        ],
+        "typed_tokens": {
+            "mass": [
+                "A",
+                "B"
+            ]
+        },
+        "instantiated_variables": {},
+        "outgoing_connections": [
+            "A_3"
+        ],
+        "conversions": null,
+        "injected_typed_tokens": null
+    },
+    "N_2": {
+        "identifier": "N_2",
+        "name": "Tank",
+        "parent_id": "N_0",
+        "modeller_class": "NodeSimple",
+        "entity_name": "macroscopic.node.mass|dynamic|lumped.Tank",
+        "network": "liquid",
+        "named_network": "A-liquid",
+        "tokens": [
+            "mass"
+        ],
+        "typed_tokens": {
+            "mass": [
+                "A",
+                "B"
+            ]
+        },
+        "instantiated_variables": {
+            "V_104": {},
+            "V_105": {},
+            "V_106": {},
+            "V_132": {},
+            "V_143": {},
+            "V_195": {},
+            "V_197": {},
+            "V_199": {},
+            "V_201": {}
+        },
+        "outgoing_connections": [],
+        "conversions": {},
+        "injected_typed_tokens": null
+    },
+    "A_3": {
+        "identifier": "A_3",
+        "name": "Pipe",
+        "parent_id": "N_0",
+        "modeller_class": "Arc",
+        "entity_name": "macroscopic.arc.mass|convection|lumped.Pipe",
+        "network": "liquid",
+        "named_network": "A-liquid >>> A-liquid",
+        "tokens": [
+            "mass"
+        ],
+        "typed_tokens": {
+            "mass": [
+                "A",
+                "B"
+            ]
+        },
+        "instantiated_variables": {
+            "V_160": {}
+        },
+        "outgoing_connections": [
+            "N_2"
+        ]
+    }
+}

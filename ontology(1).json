@@ -770,22 +770,30 @@
     }
   },
   "rules": {
-    "are_constants": [],
-    "are_persistent_variables": [],
     "name_space": false,
     "network_enable_adding_indices": {
+      "atomic": false,
+      "chemical": false,
       "control": false,
+      "electrical": false,
       "energy": false,
       "fluid": false,
       "gas": false,
       "info_processing": false,
       "liquid": false,
       "macroscopic": false,
+      "magnetic": false,
+      "material": false,
+      "mechanical": false,
       "microscopic": false,
+      "optical": false,
       "physical": false,
+      "radiological": false,
+      "reaction": false,
       "reactions": false,
       "root": false,
-      "solid": false
+      "solid": false,
+      "thermal": false
     },
     "nodes_allowing_token_conversion": [
       "dynamic",
@@ -798,9 +806,6 @@
       "intraface",
       "node_arc"
     ],
-    "normed_network": {
-      "control": true
-    },
     "numerical_value": "value",
     "variable_classes_being_state_variables": [],
     "variable_classes_having_port_variables": [
